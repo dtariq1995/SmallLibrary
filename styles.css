@@ -1,0 +1,77 @@
+@font-face {
+    font-family: Zen-Maru-Gothic;
+    src: url(./Assets/Zen_Maru_Gothic/ZenMaruGothic-Regular.ttf);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(180, 180, 180);
+    font-family: Zen-Maru-Gothic;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    font-size: 36px;
+    background-color: rgb(56, 62, 133);
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6em 2em 0.6em 0.6em;
+}
+
+#book-button {
+    font-family: Zen-Maru-Gothic;
+    background-color:rgb(56, 62, 133);
+    border-color: white;
+    border-width: 5px;
+    border-style:solid;
+    border-radius: 1em;
+    padding: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#book-button:hover {
+    background-color: rgb(76, 81, 132);
+}
+
+footer {
+    background-color: rgb(56, 62, 133);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+footer p {
+    color: white;
+}
+
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#grid-area {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 0.1fr));
+    padding: 1em;
+    padding-left: 2.4em;
+    padding-top: 4em;
+}
+
+
+.card {
+    background-color: white;
+    height: 300px;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+}
