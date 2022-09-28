@@ -57,21 +57,58 @@ footer a {
     text-decoration: none;
 }
 
+footer a:hover {
+    color: rgb(87, 115, 166);
+}
+
 #grid-area {
     display: grid;
     grid-auto-flow: row;
     gap: 16px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 0.1fr));
-    padding: 1em;
-    padding-left: 2.4em;
-    padding-top: 4em;
+    padding: 4em 1em 1em 2.4em;
 }
 
 
 .card {
     background-color: white;
     height: 300px;
+    border-color: rgb(71, 77, 135);
+    border-width: 6px;
+    border-style: solid;
     border-radius: 1em;
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Zen-Maru-Gothic;
+}
+
+.title {
+    font-size: 32px;
+}
+
+.author {
+
+}
+
+.num-pages {
+
+}
+
+.read {
+    justify-content: flex-end;
+}
+
+#form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 35vh;
+    width: 25vw;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
 }
