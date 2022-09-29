@@ -19,6 +19,13 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+function toggle() {
+    var dim = document.getElementById('dim');
+    dim.classList.toggle('active');
+    var form = document.getElementById('form');
+    form.classList.toggle('active');
+}
+
 function displayBook(myLibrary) {
 
     let libarySize = myLibrary.length;
@@ -54,7 +61,7 @@ function displayBook(myLibrary) {
 
 const theHobbit = new Book("THE HOBBIT", "J.R.R. Tolkien", 295, "Not read yet");
 const fakeBook = new Book("FAKE BOOK", "Me", 100, "Read");
-
+const fakeBook2 = new Book("FAKE BOOK", "Me", 100, "Read");
 
 
 displayBook(myLibrary);

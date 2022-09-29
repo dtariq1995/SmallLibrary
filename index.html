@@ -10,19 +10,57 @@
 
 <body>
 
-    <header>
-        <div>MY LIBRARY</div>
-        <button id="book-button" onclick="showForm()">ADD NEW BOOK</button>
-    </header>
+    <container id="dim">
 
-    <form id="form"></form>
-    <container id="grid-area">
-        
+        <header>
+            <div>MY LIBRARY</div>
+            <button id="book-button" onclick="toggle()">ADD NEW BOOK</button>
+        </header>
+
+
+        <container id="grid-area">
+            
+        </container>
+
+        <footer>
+            <p>Created by: <img src="Assets/GitHub-Mark-Light-32px.png" height="18px" width="18px"><a href ="https://github.com/dtariq1995"> Daanyaal Tariq</a></p>
+        </footer>
+
     </container>
 
-    <footer>
-        <p>Created by: <img src="Assets/GitHub-Mark-Light-32px.png" height="18px" width="18px"><a href ="https://github.com/dtariq1995"> Daanyaal Tariq</a></p>
-    </footer>
+    <form id="form">
+
+        <div id="form-title">ADD A NEW BOOK</div>
+
+        <p class="form-control">
+            <label for="title">TITLE</label>
+            <input type="text" id="title">
+        </p>
+
+        <p class="form-control">
+            <label for="author">AUTHOR</label>
+            <input type="text" id="author">
+        </p>
+
+        <p class="form-control">
+            <label for="numPages">NUMBER OF PAGES</label>
+            <input type="number" id="numPages">
+        </p>
+
+        <p class="form-control">
+            <label for="readYet">READ?</label>
+            <select name="readYet" id="readYet">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </p>
+
+        <div id="form-buttons">
+            <button type="button" class="form-buttons" id="add-book" onclick="toggle()">ADD BOOK</button>
+            <button type="button" class="form-buttons" id="cancel" onclick="toggle()">CANCEL</button>
+        </div>
+
+    </form>
 
 </body>
 <script src="./library.js"></script>

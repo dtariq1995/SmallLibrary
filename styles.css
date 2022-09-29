@@ -4,6 +4,12 @@
 }
 
 body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#dim {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -11,6 +17,21 @@ body {
     background-color: rgb(180, 180, 180);
     font-family: Zen-Maru-Gothic;
     padding: 0;
+    transition: 1s;
+    filter: blur(0px);
+}
+
+#dim.active {
+    filter: blur(5px);
+    transition: 0.5s;
+    pointer-events: none;
+    user-select: none;
+}
+
+.active {
+    background: rgb(0, 0, 0);
+    opacity: 0.75;
+    filter: Alpha(Opacity=50);
 }
 
 header {
@@ -83,6 +104,7 @@ footer a:hover {
     align-items: center;
     justify-content: space-between;
     font-family: Zen-Maru-Gothic;
+    transition: 0.5s;
 }
 
 .title {
@@ -106,9 +128,87 @@ footer a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 35vh;
-    width: 25vw;
+    height: 475px;
+    width: 330px;
     background-color: rgb(255, 255, 255);
     border-radius: 1em;
     box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    border-color: rgb(71, 77, 135);
+    max-width: 350px;
+    border-width: 6px;
+    border-style: solid;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#form.active {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+label {
+    color: rgb(71, 77, 135);
+    font-weight: 600;
+    display: block;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+}
+
+#form-title {
+    font-size: 1.5em;
+    padding: 10px;
+}
+
+input {
+    padding: 0.3em;
+    margin-top: 0.3em;
+    font-family: inherit;
+    font-size: 1em;
+    width: 15em;
+}
+
+input:focus {
+    outline-color: rgb(71, 77, 135);
+}
+
+select {
+    padding: 0.3em;
+    margin-top: 0.3em;
+    font-family: inherit;
+    font-size: 1em;
+    width: 16em;
+}
+
+select:focus {
+    outline-color: rgb(71, 77, 135);
+}
+
+.form-buttons {
+    width: 130px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 7px;
+    font-family: Zen-Maru-Gothic;
+    background-color:rgb(71, 77, 135);
+    border-color: white;
+    border-width: 5px;
+    border-style:solid;
+    border-radius: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-buttons:hover {
+    opacity: 0.8;
+}
+
+#cancel {
+    background-color: rgb(249, 77, 77);
 }
