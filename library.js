@@ -14,9 +14,18 @@ Book.prototype.info = function() {
     return this.title + " by " + this.author + ", " + this.pages + " pages, " + this.read;
 }
 
-function addBookToLibrary(book) {
+function addBookToLibrary() {
 
-    myLibrary.push(book);
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let pages = parseInt(document.getElementById('numPages').value);
+    let read = document.getElementById('readYet').value;
+
+    let newBook = new Book(title, author, pages, read);
+    console.log(myLibrary);
+    displayBook(myLibrary);
+    return newBook;
+
 }
 
 function toggle() {
