@@ -59,7 +59,17 @@ function displayBook(book) {
     readOrNot.classList.add("read");
     readOrNot.textContent = book.read;
 
-    card.append(bookTitle, authorName, numPages, readOrNot);
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete");
+    deleteBtn.textContent = "Remove";
+
+    deleteBtn.addEventListener('click', event => {
+        event.target.parentNode.remove();
+        myLibrary.splice(myLibrary.indexOf(book),1);
+      });
+      
+
+    card.append(bookTitle, authorName, numPages, readOrNot, deleteBtn);
 }
 
 const theHobbit = new Book("THE HOBBIT", "J.R.R. Tolkien", 295, "Not read yet");
