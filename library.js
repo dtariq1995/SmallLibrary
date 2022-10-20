@@ -72,6 +72,6 @@ function displayBook(book) {
     card.append(bookTitle, authorName, numPages, readOrNot, deleteBtn);
 }
 
-const theHobbit = new Book("THE HOBBIT", "J.R.R. Tolkien", 295, "Not read yet");
+const theHobbit = new Book("SAMPLE", "Joe Smith", 295, "Not read yet");
 
 
