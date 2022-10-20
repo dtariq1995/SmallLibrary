@@ -61,7 +61,7 @@ function displayBook(book) {
 
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete");
-    deleteBtn.textContent = "Remove";
+    deleteBtn.textContent = "X";
 
     deleteBtn.addEventListener('click', event => {
         event.target.parentNode.remove();

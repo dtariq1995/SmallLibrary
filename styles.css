@@ -213,3 +213,10 @@ select:focus {
 #cancel {
     background-color: rgb(249, 77, 77);
 }
+
+.delete {
+    color: white;
+    background: rgb(249, 77, 77);
+    border-style: none;
+    padding: 10px 15px;
+}
