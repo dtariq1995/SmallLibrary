@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: Zen-Maru-Gothic;
     min-height: 100vh;
     margin: 0;
     padding: 0;
@@ -122,6 +123,28 @@ footer a:hover {
 
 .read {
     justify-content: flex-end;
+    background-color: rgb(35, 158, 35);
+    color: white;
+    padding: 8px;
+    border-radius: 5%;
+    font-weight: 900;
+}
+
+.read:hover {
+    background-color: rgb(93, 190, 93)
+}
+
+.notRead {
+    justify-content: flex-end;
+    background-color: rgb(245, 144, 43);
+    color: white;
+    padding: 5px;
+    border-radius: 5%;
+    font-weight: 900;
+}
+
+.notRead {
+    background-color: rgb(252, 172, 93);
 }
 
 #form {
@@ -154,6 +177,7 @@ footer a:hover {
 }
 
 label {
+    font-family: Zen-Maru-Gothic;
     color: rgb(71, 77, 135);
     font-weight: 600;
     display: block;
@@ -162,11 +186,13 @@ label {
 }
 
 #form-title {
+    font-family: Zen-Maru-Gothic;
     font-size: 1.5em;
     padding: 10px;
 }
 
 input {
+    font-family: Zen-Maru-Gothic;
     padding: 0.3em;
     margin-top: 0.3em;
     font-family: inherit;
@@ -216,7 +242,13 @@ select:focus {
 
 .delete {
     color: white;
-    background: rgb(249, 77, 77);
+    background-color: rgb(249, 77, 77);
     border-style: none;
     padding: 10px 15px;
+    border-radius: 2px;
+    font-weight: 900;
+}
+
+.delete:hover {
+    background-color: rgb(253, 113, 113);
 }

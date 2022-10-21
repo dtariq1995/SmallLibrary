@@ -35,6 +35,8 @@ function toggle() {
     form.classList.toggle('active');
 }
 
+
+
 function displayBook(book) {
 
     const displayArea = document.getElementById("grid-area");
@@ -56,8 +58,31 @@ function displayBook(book) {
     numPages.textContent = "Number of pages: " + book.pages;
 
     const readOrNot = document.createElement("div");
-    readOrNot.classList.add("read");
     readOrNot.textContent = book.read;
+
+    if (readOrNot.textContent=="READ") {
+        readOrNot.classList.add("read");
+    }
+    else {
+        readOrNot.classList.add("notRead");
+    }
+
+    readOrNot.addEventListener('click', e => {
+        if (readOrNot.textContent == "READ") {
+            readOrNot.classList.remove("read");
+            readOrNot.classList.add("notRead");
+            readOrNot.textContent = "NOT READ";
+            book.read = "NOT READ";
+        }
+        else {
+            readOrNot.textContent = "READ";
+            readOrNot.classList.remove("notRead");
+            readOrNot.classList.add("read");
+            book.read = "READ";
+        }
+            
+        console.log(myLibrary);
+    })
 
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete");
@@ -72,6 +97,6 @@ function displayBook(book) {
     card.append(bookTitle, authorName, numPages, readOrNot, deleteBtn);
 }
 
-const theHobbit = new Book("SAMPLE", "Joe Smith", 295, "Not read yet");
+const theHobbit = new Book("SAMPLE", "Joe Smith", 295, "NOT READ");
 
 
