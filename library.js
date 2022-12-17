@@ -1,14 +1,16 @@
 let myLibrary = [];
 
-function Book(title, author, pages, read) {
+class Book {
 
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    myLibrary.push(this);
-    displayBook(this);
-    console.log(myLibrary);
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+
+        myLibrary.push(this);
+        displayBook(this);
+    }
 }
 
 Book.prototype.info = function() {
@@ -97,6 +99,6 @@ function displayBook(book) {
     card.append(bookTitle, authorName, numPages, readOrNot, deleteBtn);
 }
 
-const theHobbit = new Book("SAMPLE", "Joe Smith", 295, "NOT READ");
+const sampleBook = new Book("SAMPLE", "Joe Smith", 295, "NOT READ");
 
 
